@@ -1,0 +1,45 @@
+$ git config --global user.name "Swastika pani"
+
+
+ git config --global user.email "swastikapani1234@gmail.com"
+$ git add .
+
+ git commit -m "2nd file"
+[master (root-commit) 12ec5d3] 2nd file
+ 1 file changed, 12 insertions(+)
+ create mode 100644 App2.java
+
+$ git branch -M main
+$ git remote add origin https://github.com/SwastikaPani29/SecondRepo.git
+$ git push -u origin main
+To https://github.com/SwastikaPani29/SecondRepo.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/SwastikaPani29/SecondRepo.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+//here when ever i m pushing one .java file i m getting error
+i have to pull the update then push it
+
+
+
+$ git pull origin main --allow-unrelated-histories
+//what ever .java file is crated in sendrepo will be pull to local repo
+
+
+
+ git push -u origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 644 bytes | 322.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/SwastikaPani29/SecondRepo.git
+   a7b52a1..c560c6d  main -> main
+branch 'main' set up to track 'origin/main'.
+
+//pushed to remote repo
